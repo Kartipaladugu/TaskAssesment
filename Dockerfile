@@ -1,3 +1,4 @@
+#Docker file for creating tomcat application server
 FROM alpine:latest
 
 RUN apk update && \
