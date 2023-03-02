@@ -1,0 +1,44 @@
+#Kubernetes yaml file for creating deployment and pods
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: helloworld-deployment
+
+  labels:
+
+    app: hello
+
+spec:
+
+  replicas: 1
+
+  selector:
+
+    matchLabels:
+
+        app: hello
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: hello
+
+    spec:
+
+      containers:
+
+      - name: hello
+
+        image: 493589310909.dkr.ecr.ap-northeast-1.amazonaws.com/demorepo:latest
+
+        ports:
+
+        - containerPort: 8080
+
+ 
